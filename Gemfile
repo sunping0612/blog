@@ -27,13 +27,13 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   # gem "jekyll-gist"
   # gem "jekyll-optional-front-matter"
-  gem "jekyll-paginate"
+  #gem "jekyll-paginate"
   # gem "jekyll-readme-index"
   # gem "jekyll-redirect-from"
-  gem "jekyll-relative-links"
+  #gem "jekyll-relative-links"
   # gem "jekyll-remote-theme"
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
+  #gem "jekyll-seo-tag"
+  #gem "jekyll-sitemap"
   # gem "jekyll-titles-from-headings"
 end
 

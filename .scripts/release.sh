@@ -12,7 +12,7 @@ cp -r \
     ! -name .sass-cache \
     ! -name .bundle \
     ! -name node_modules \
-    ! -name .vendor\
+    ! -name vendor\
     ! -name _zip  \
     ! -name '*~' \
     ! -name '_site*' \

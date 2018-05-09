@@ -20,7 +20,6 @@
   "config": {
     "port": 4000
   },
-  "license": "GPL-3.0",
   "private": true,
   "devDependencies": {
     "babel-core": "^6.26.0",

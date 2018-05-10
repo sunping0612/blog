@@ -201,10 +201,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed
-  jekyll-paginate
-  jekyll-relative-links
-  jekyll-seo-tag
-  jekyll-sitemap
+  tzinfo-data
 
 BUNDLED WITH
    1.16.1

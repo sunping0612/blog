@@ -29,7 +29,7 @@ layout: base
 
 <h2 class="hr">{{ posts }}</h2>
 
-{ { site | jsonify } }
+{{ site | jsonify }}
 
 <!-- {% if category %}
   {% assign posts = site.categories[page.slug] %}

@@ -54,8 +54,7 @@ layout: base
 {% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
 {% assign list_entry    = date_formats.list_entry    | default:"%d %b" %}
 
-{% for (post, key) in posts %}
-  <h2 class="hr">{{ key }}</h2>
+{% for post in posts %}
   {% assign currentdate = post %}
   <h2 class="hr">{{ currentdate }}</h2>
 <!--   {% if currentdate != date %}

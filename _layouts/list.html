@@ -22,7 +22,7 @@
 layout: base
 ---
 
-{% assign categories = site.featured_tags | where: "slug", page.slug | first %}
+{% assign categories = site.featured_tags | where: "slug" %}
 <h2 class="hr">{{ categories }}</h2>
 <!-- {% if category %}
   {% assign posts = site.categories[page.slug] %}

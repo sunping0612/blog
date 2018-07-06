@@ -25,12 +25,7 @@ layout: base
 {% assign categories = site.featured_tags %}
 <h2 class="hr">{{ categories }}</h2>
 
-{% assign tag = site.featured_tags | where: "slug", page.slug | first %}
-{% if tag %}
-  {% assign posts = site.tags[page.slug] %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+{% assign posts = site.tags %}
 
 <h2 class="hr">{{ posts }}</h2>
 

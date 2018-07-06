@@ -29,8 +29,6 @@ layout: base
 
 <h2 class="hr">{{ posts }}</h2>
 
-{{ site | jsonify }}
-
 <!-- {% if category %}
   {% assign posts = site.categories[page.slug] %}
 {% else %}
@@ -56,9 +54,10 @@ layout: base
 {% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
 {% assign list_entry    = date_formats.list_entry    | default:"%d %b" %}
 
-{% for post in posts %}
-  {% assign currentdate = post.slug %}
-  <h2 id="{{ list_group_by | slugify }}-{{ currentdate | slugify }}" class="hr">{{ currentdate }}</h2>
+{% for (post, key) in posts %}
+  <h2 class="hr">{{ key }}</h2>
+  {% assign currentdate = post %}
+  <h2 class="hr">{{ currentdate }}</h2>
 <!--   {% if currentdate != date %}
     {% unless forloop.first %}</ul>{% endunless %}
     <h2 id="{{ list_group_by | slugify }}-{{ currentdate | slugify }}" class="hr">{{ currentdate }}</h2>

@@ -22,26 +22,6 @@
 layout: base
 ---
 
-{% assign categories = site.featured_tags %}
-<h2 class="hr">{{ categories }}</h2>
-
-{% assign pages = site.pages | where: "menu", true %}
-{% assign documents = site.documents | where: "menu", true %}
-{% assign posts = pages | concat: documents | sort: "order" %}
-
-<h2 class="hr">{{ posts }}</h2>
-
-<!-- {% if category %}
-  {% assign posts = site.categories[page.slug] %}
-{% else %}
-  {% assign tag = site.featured_tags | where: "slug", page.slug | first %}
-  {% if tag %}
-    {% assign posts = site.tags[page.slug] %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-{% endif %} -->
-
 {% if page.title.size > 0 %}
   <header>
     <h1 class="page-title">{{ page.title }}</h1>
@@ -52,19 +32,13 @@ layout: base
 
 {{ content }}
 
-{% assign date_formats  = site.data.strings.date_formats               %}
-{% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
-{% assign list_entry    = date_formats.list_entry    | default:"%d %b" %}
-
-{% for post in posts %}
-  {% assign currentdate = post %}
-  <h2 class="hr">{{ currentdate }}</h2>
-<!--   {% if currentdate != date %}
-    {% unless forloop.first %}</ul>{% endunless %}
-    <h2 id="{{ list_group_by | slugify }}-{{ currentdate | slugify }}" class="hr">{{ currentdate }}</h2>
-    <ul class="related-posts">
-    {% assign date = currentdate %}
-  {% endif %}
-  {% include post-list-item.html post=post format=list_entry %}
-  {% if forloop.last %}</ul>{% endif %} -->
-{% endfor %}
+<ul>
+  {% assign pages = site.pages | where: "tag", true %}
+  {% assign documents = site.documents | where: "tag", true %}
+  {% assign tags = pages | concat: documents | sort: "order" %}
+  {% for tag in tags %}
+    <li>
+      <a href="/tag/{{ tag.slug }}" class="sidebar-nav-item external" >{{ tag.slug }}</a>
+    </li>
+  {% endfor %}
+</ul>

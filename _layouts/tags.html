@@ -39,7 +39,7 @@ layout: base
   {% for tag in tags %}
     <li class="tag-list-item">
       <a
-         href="/tag/{{ tag.slug }}"
+         href="{{ tag.url | relative_url }}"
          class="tag"
          style="background-color: {{tag.accent_color}};border-color: {{tag.accent_color}}">
         {{ tag.slug }}

@@ -10,3 +10,40 @@
 .tag-list-item {
   float: left;
 }
+
+.tag {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  padding: 0 5px 0 10px;
+  position: relative;
+  border-radius: 0 5px 5px 0;
+  margin: 5px 9px 5px 8px;
+}
+
+.tag:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: -18px;
+  border: 9px solid transparent;
+}
+
+.tag:after {
+  content: " ";
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 7px;
+  left: 2px;
+}

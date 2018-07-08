@@ -47,3 +47,8 @@
   top: 7px;
   left: 2px;
 }
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+}

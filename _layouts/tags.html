@@ -25,7 +25,7 @@ layout: base
 {% assign categories = site.featured_tags %}
 <h2 class="hr">{{ categories }}</h2>
 
-{% assign posts = site.tags %}
+{% assign posts = site.featured_tags | where: "menu", true %}
 
 <h2 class="hr">{{ posts }}</h2>
 

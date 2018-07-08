@@ -9,6 +9,7 @@
 
 .tag-list-item {
   float: left;
+  list-style-type: none;
 }
 
 .tag {
@@ -16,14 +17,19 @@
   text-decoration: none;
   font-weight: 400;
   font-size: 10px;
-  color: #fff;
+  color: #fff !important;
   height: 18px;
   line-height: 18px;
   float: left;
   padding: 0 5px 0 10px;
   position: relative;
   border-radius: 0 5px 5px 0;
+  border-color: inherit;
   margin: 5px 9px 5px 8px;
+}
+
+a.tag:hover {
+  border-color: inherit !important;
 }
 
 .tag:before {
@@ -34,6 +40,7 @@
   top: 0;
   left: -18px;
   border: 9px solid transparent;
+  border-right-color: inherit;
 }
 
 .tag:after {

@@ -38,7 +38,7 @@ layout: base
   {% assign tags = pages | concat: documents | sort: "order" %}
   {% for tag in tags %}
     <li class="tag-list-item">
-      <a href="/tag/{{ tag.slug }}" class="tag" style="backgroud-color: {{tag.accent_image.background}}">{{ tag.slug }}</a>
+      <a href="/tag/{{ tag.slug }}" class="tag" style="background-color: {{tag.accent_image.background}}">{{ tag.slug }}</a>
     </li>
   {% endfor %}
 </ul>

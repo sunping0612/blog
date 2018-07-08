@@ -2,6 +2,7 @@
 layout: list
 title: Hyde
 slug: hyde
+tag: true
 menu: true
 order: 1
 description: >

@@ -25,13 +25,11 @@ layout: base
 {% assign categories = site.featured_tags %}
 <h2 class="hr">{{ categories }}</h2>
 
-{% assign posts = site.featured_tags | where: "menu", true %}
+{% assign pages = site.pages | where: "menu", true %}
+{% assign documents = site.documents | where: "menu", true %}
+{% assign posts = pages | concat: documents | sort: "order" %}
 
 <h2 class="hr">{{ posts }}</h2>
-
-<h2 class="hr">{{ site.pages }}</h2>
-
-<h2 class="hr">{{ site.documents }}</h2>
 
 <!-- {% if category %}
   {% assign posts = site.categories[page.slug] %}

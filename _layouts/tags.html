@@ -32,13 +32,13 @@ layout: base
 
 {{ content }}
 
-<ul>
+<ul class="tag-list">
   {% assign pages = site.pages | where: "tag", true %}
   {% assign documents = site.documents | where: "tag", true %}
   {% assign tags = pages | concat: documents | sort: "order" %}
   {% for tag in tags %}
-    <li>
-      <a href="/tag/{{ tag.slug }}" class="sidebar-nav-item external" >{{ tag.slug }}</a>
+    <li class="tag-list-item">
+      <a href="/tag/{{ tag.slug }}" class="tag" style="backgroud-color: {{tag.accent_image.background}}">{{ tag.slug }}</a>
     </li>
   {% endfor %}
 </ul>

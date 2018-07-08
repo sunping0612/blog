@@ -2,6 +2,7 @@
 layout: tags
 title: Tags
 slug: all
+tag: false
 menu: true
 order: 0
 description: >

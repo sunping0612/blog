@@ -2,6 +2,7 @@
 layout: list
 title: Hydejack
 slug: hydejack
+tag: true
 menu: true
 order: 2
 description: >
